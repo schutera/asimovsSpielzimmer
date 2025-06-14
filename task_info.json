@@ -1,0 +1,13 @@
+{
+  "tasks": {
+    "move_to_cube": {
+      "task_type": "move_to_cube",
+      "cube": {
+        "rgb_colour": ["<int>", "<int>", "<int>"],
+        "position": ["x (-0.45 to 0.45)", "y (-0.45 to 0.45)", "z (-0.45 to 0.45)"],
+        "size": "<float max 0.25>"
+      },
+      "prompt": "<string> use a single short sentence"
+    }
+  }
+}
