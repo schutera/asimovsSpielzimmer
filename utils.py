@@ -2,7 +2,7 @@ import os
 import yaml
 import numpy as np
 
-def save_config_to_file(config, task_type, base_dir):
+def save_config_to_file(config, task_type, base_dir=""):
     """
     Saves the config dict as a YAML file in base_dir/configs, with a unique filename.
     """
