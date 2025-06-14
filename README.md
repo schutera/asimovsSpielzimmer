@@ -8,7 +8,7 @@ Yes, you’ll need a lot of data to get anywhere near generalization. Our soluti
 
 Push it up to Huggingface 🤗 and train your robot.
 
-![asimovsSpielzimmer logo](/materials/image_spielzimmer.png)
+![HeroImage](/materials/image.png)
 
 ---
 
