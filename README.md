@@ -62,7 +62,8 @@ Add new YAML templates to extend functionality. Make sure to enable your simulat
 ## 🥨 Free Data or as we call it in German: Brezel
 
 - [Our move_to_cube imitation learning dataset](https://huggingface.co/datasets/mrkschtr/real_movetocube) 
-
+- [Our first 50 episodes move_to_cube sim generated dataset](https://huggingface.co/datasets/RickRain/asimovsToyboxMoveToCube)
+- 
 ---
 ## 📖 Citation
 
