@@ -33,7 +33,7 @@ Ideal for researchers, enthusiasts, and anyone looking to streamline the creatio
 
 1. **Clone this repo**  
     ```bash
-    git clone https://github.com/yourusername/asimovsSpielzimmer.git
+    git clone https://github.com/schutera/asimovsSpielzimmer.git
     cd asimovsSpielzimmer
     ```
 
