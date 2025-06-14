@@ -2,6 +2,7 @@ import os
 import json
 import openai
 from utils import save_config_to_file, parse_llm_yaml, generate_random_array
+import argparse
 
 # Set your OpenAI API key (ensure you have it in your environment)
 openai.api_key = os.environ.get("OPENAI_API_KEY")
@@ -10,9 +11,9 @@ def get_config_from_llm(
     task_type,
     task_info_json="task_info.json",
     prompt_template=(
-        "Respond with a filled yaml file with the following fields:\n"
+        "Respond with a filled yaml file with the following fields only:\n"
         "{task_info}\n"
-        "Use random numbers from here: {array_0_1} for 0-1 ranges and {array_0_255} for 0-255 ranges.\n"
+        "If needed use random numbers from here: {array_0_1} for 0-1 ranges and {array_0_255} for 0-255 ranges.\n"
         "Only output the YAML, nothing else."
     ),
     model="gpt-4o"
@@ -27,6 +28,7 @@ def get_config_from_llm(
         task_info_data = json.load(f)
     # Assume the JSON is a dict with a "tasks" key
     task_info_str = task_info_data["tasks"].get(task_type, None)
+    # print(task_info_str)
     if not task_info_str:
         raise ValueError(f"Task type '{task_type}' not found in {task_info_json}")
     
@@ -51,8 +53,17 @@ def get_config_from_llm(
     return parse_llm_yaml(reply)
 
 if __name__ == "__main__":
-    # Example usage
-    for _ in range(10):
-        task_type = "move_to_cube"
-        config = get_config_from_llm(task_type, "task_info.json")
-        save_config_to_file(config, task_type, "configs/")
+
+    parser = argparse.ArgumentParser(description="Generate robot environment configs using LLM.")
+    parser.add_argument("--task_type", type=str, default="push_cube_to_cube", help="Task type (e.g. sitz, move_to_cube, push_cube_to_cube)")
+    parser.add_argument("--num_episodes", type=int, default=1, help="Number of configurations to generate")
+    parser.add_argument("--task_info_json", type=str, default="task_info.json", help="Path to task templates")
+
+    args = parser.parse_args()
+
+    for _ in range(args.num_episodes):
+        config = get_config_from_llm(
+            args.task_type,
+            task_info_json=args.task_info_json,
+        )
+        save_config_to_file(config, args.task_type)

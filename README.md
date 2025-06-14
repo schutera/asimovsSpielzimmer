@@ -4,6 +4,8 @@ Welcome to **asimovsSpielzimmer** – your SO101 robot's playground!
 Generate, explore, and experiment with simulation configs using the latest LLMs.  
 Let your robots play, learn, and support your teleoperated recordings with large scale simulated datasets!
 
+![asimovsSpielzimmer logo](/materials/image.png)
+
 ---
 
 ## 🚀 What is this?
