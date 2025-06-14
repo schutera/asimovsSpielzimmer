@@ -4,7 +4,7 @@
       "task_type": "move_to_cube",
       "cube": {
         "rgb_colour": ["<int>", "<int>", "<int>"],
-        "position": ["x (-0.25 to 0.25)", "y (-0.25 to 0)", "z (0 to 0.45)"],
+        "position": ["x (-0.25 to 0.25)", "y (-0.25 to -0.1)", "z (is 0)"],
         "orientation": ["<float (cos(gamma/2)) gamma from 0 to 360 >", "0", "0", "<float (sin(gamma/2)) gamma from 0 to 360 >"],
         "length": "<float max 0.03>",
         "width": "<float max 0.03>",
@@ -16,7 +16,7 @@
       "task_type": "push_cube_to_cube",
       "start_cube": {
         "rgb_colour": ["<int>", "<int>", "<int>"],
-        "position": ["x (-0.25 to 0.25)", "y (-0.25 to 0)", "z (is 0)"],
+        "position": ["x (-0.25 to 0.25)", "y (-0.25 to -0.1)", "z (is 0)"],
         "orientation": ["<float (cos(gamma/2)) gamma from 0 to 360 >", "0", "0", "<float (sin(gamma/2)) gamma from 0 to 360 >"],
         "length": "<float max 0.03>",
         "width": "<float max 0.03>",
@@ -24,7 +24,7 @@
       },
       "target_cube": {
         "rgb_colour": ["<int>", "<int>", "<int>"],
-        "position": ["x (-0.25 to 0.25)", "y (-0.25 to 0)", "z (is 0)"],
+        "position": ["x (-0.25 to 0.25)", "y (-0.25 to -0.1)", "z (is 0)"],
         "orientation": ["<float (cos(gamma/2)) gamma from 0 to 360 >", "0", "0", "<float (sin(gamma/2)) gamma from 0 to 360 >"],
         "length": "<float max 0.03>",
         "width": "<float max 0.03>",
