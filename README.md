@@ -57,13 +57,24 @@ Configs are saved automatically for each episode.
 See [`task_info.json`](task_info.json) for examples.  
 Add new YAML templates to extend functionality. Make sure to enable your simulation to digest the templates as well.
 
+5. **Use in Isaac Sim**
+To use the `isaac_sim_script.py` you need to download isaac sim 4.5 and run the script as standalone simulator script like this:
+```
+./python.sh /home/<path-to-your-script>/isaac_sim_script.py --base_yaml_dir /home/<path-to-your-config-yaml-dir>/configs --output_path /home/<your-sim-output-save-path>
+```
+**Quick warning:** This script was created during the 2025 Hugging Face LeRobot Hackathon and is beyond hacky and unprofessional. Use at your own risk. If you find something useful, it's probably best to pick out the good parts yourself (or with the help of your trusted LLM).
+
+
 ---
 
 ## 🥨 Free Data or as we call it in German: Brezel
 
 - [Our move_to_cube imitation learning dataset](https://huggingface.co/datasets/mrkschtr/real_movetocube) 
 - [Our first 50 episodes move_to_cube sim generated dataset](https://huggingface.co/datasets/RickRain/asimovsToyboxMoveToCube)
-- 
+- [Move to cube Isaac Sim dataset](https://huggingface.co/datasets/RickRain/asimovsToyboxMoveToCube)
+- [Pick and place Isaac Sim dataset](https://huggingface.co/datasets/RickRain/asimovsToyboxPickandplace)
+
+
 ---
 ## 📖 Citation
 

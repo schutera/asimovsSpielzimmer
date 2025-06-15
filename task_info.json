@@ -3,9 +3,22 @@
     "move_to_cube": {
       "task_type": "move_to_cube",
       "cube": {
-        "rgb_colour": ["<int>", "<int>", "<int>"],
-        "position": ["x (-0.25 to 0.25)", "y (-0.25 to -0.1)", "z (is 0)"],
-        "orientation": ["<float (cos(gamma/2)) gamma from 0 to 360 >", "0", "0", "<float (sin(gamma/2)) gamma from 0 to 360 >"],
+        "rgb_colour": [
+          "<int>",
+          "<int>",
+          "<int>"
+        ],
+        "position": [
+          "x (-0.25 to 0.25)",
+          "y (-0.25 to -0.1)",
+          "z (is 0)"
+        ],
+        "orientation": [
+          "<float (cos(gamma/2)) gamma from 0 to 360 >",
+          "0",
+          "0",
+          "<float (sin(gamma/2)) gamma from 0 to 360 >"
+        ],
         "length": "<float max 0.03>",
         "width": "<float max 0.03>",
         "height": "<float max 0.03>"
@@ -15,20 +28,92 @@
     "push_cube_to_cube": {
       "task_type": "push_cube_to_cube",
       "start_cube": {
-        "rgb_colour": ["<int>", "<int>", "<int>"],
-        "position": ["x (-0.25 to 0.25)", "y (-0.25 to -0.1)", "z (is 0)"],
-        "orientation": ["<float (cos(gamma/2)) gamma from 0 to 360 >", "0", "0", "<float (sin(gamma/2)) gamma from 0 to 360 >"],
+        "rgb_colour": [
+          "<int>",
+          "<int>",
+          "<int>"
+        ],
+        "position": [
+          "x (-0.25 to 0.25)",
+          "y (-0.25 to -0.1)",
+          "z (is 0)"
+        ],
+        "orientation": [
+          "<float (cos(gamma/2)) gamma from 0 to 360 >",
+          "0",
+          "0",
+          "<float (sin(gamma/2)) gamma from 0 to 360 >"
+        ],
         "length": "<float max 0.03>",
         "width": "<float max 0.03>",
         "height": "<float max 0.03>"
       },
       "target_cube": {
-        "rgb_colour": ["<int>", "<int>", "<int>"],
-        "position": ["x (-0.25 to 0.25)", "y (-0.25 to -0.1)", "z (is 0)"],
-        "orientation": ["<float (cos(gamma/2)) gamma from 0 to 360 >", "0", "0", "<float (sin(gamma/2)) gamma from 0 to 360 >"],
+        "rgb_colour": [
+          "<int>",
+          "<int>",
+          "<int>"
+        ],
+        "position": [
+          "x (-0.25 to 0.25)",
+          "y (-0.25 to -0.1)",
+          "z (is 0)"
+        ],
+        "orientation": [
+          "<float (cos(gamma/2)) gamma from 0 to 360 >",
+          "0",
+          "0",
+          "<float (sin(gamma/2)) gamma from 0 to 360 >"
+        ],
         "length": "<float max 0.03>",
         "width": "<float max 0.03>",
         "height": "<float max 0.03>"
+      },
+      "prompt": "<string> use a single short sentence"
+    },
+    "pick_and_place_cube": {
+      "task_type": "pick_and_place_cube",
+      "start_cube": {
+        "rgb_colour": [
+          "<int>",
+          "<int>",
+          "<int>"
+        ],
+        "position": [
+          "x (-0.25 to 0.25)",
+          "y (-0.25 to -0.1)",
+          "z (is 0)"
+        ],
+        "orientation": [
+          "<float (cos(gamma/2)) gamma from -10 to 10 >",
+          "0",
+          "0",
+          "<float (sin(gamma/2)) gamma from -10 to 10 >"
+        ],
+        "length": "<float (0.04 0.07)>",
+        "width": "0.02",
+        "height": "<float (0.04 0.06)>"
+      },
+      "landing_zone": {
+        "rgb_colour": [
+          "<int>",
+          "<int>",
+          "<int>"
+        ],
+        "position": [
+          "x (-0.25 to 0.25)",
+          "y (-0.25 to -0.1)",
+          "z (is 0)"
+        ],
+        "orientation": [
+          "<float (cos(gamma/2)) gamma from 0 to 360 >",
+          "0",
+          "0",
+          "<float (sin(gamma/2)) gamma from 0 to 360 >"
+        ],
+        "length": "<float max 0.03>",
+        "width": "<float max 0.03>",
+        "height": "<float max 0.001>"
       },
       "prompt": "<string> use a single short sentence"
     },
